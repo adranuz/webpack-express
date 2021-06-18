@@ -13,6 +13,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.get('/api/v1', (req: Request, res: Response) => {
+  res.header("Access-Control-Allow-Origin", "*")
   res.json(initialState)
 })
 
